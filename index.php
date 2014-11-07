@@ -1,9 +1,4 @@
 <?php
 
 	include "vendor/autoload.php";
-	
-	$whoops = new \Whoops\Run;
-	$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-	$whoops->register();
-	
-	throw new Exception("Nothing here yet.");
+	include "app/Bootstrap.php";
