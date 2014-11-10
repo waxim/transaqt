@@ -27,5 +27,13 @@ class Core {
 	public static function load($name, $callback){
 		static::set($name, $callback);
 	}
+	
+	// load models
+	
+	// load views
+	
+	// load controllers
+	
+	// load modules
 
 }

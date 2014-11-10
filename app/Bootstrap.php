@@ -16,6 +16,7 @@
 */
   require_once(CORE . '/' . 'Transaqt.php');
   require_once(CORE . '/' . 'Config.php');
+  require_once(CORE . '/' . 'MVC/Controllers.php');
 
   /*
   Set an error handler
@@ -32,16 +33,19 @@
 /*
   Core Auto-Loader
 */
-  \Transaqt\Core::init();
+  //\Transaqt\Core::init();
 
   
 /*
   Module Auto-Loader
 */
-  \Transaqt\Modules::collect();
+  //\Transaqt\Modules::collect();
 
 /*
   Begin transaqt
 */
 
+  \Transaqt\Controller::init();
+  \Transaqt\Controller::get();
+  
   \Transaqt\Controller::dispatch();
