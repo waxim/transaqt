@@ -1,0 +1,11 @@
+.main.container { width: 1024px; margin: auto; margin-top: 1em; padding: 25px; background-color: #fff;  }
+.top.container { background-color: #1b1c1d; color: #fff; }
+.top.container .inner { width: 1024px; margin: auto; }
+
+.form .field textarea.small { height: 75px; }
+
+.segment.drag.drop { line-height: 75px; }
+
+.ui.bay .button { margin-bottom: 10px; }
+
+.ui.horizontal.header.divider { margin-top: 50px; margin-bottom: 50px; }
