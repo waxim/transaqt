@@ -1,6 +1,9 @@
 .main.container { width: 1024px; margin: auto; margin-top: 1em; padding: 25px; background-color: #fff;  }
+.top.container { background-color: #3b83c0; color: #fff; }
+
+.verytop.container { background-color: #3b83c0; color: #fff; }
 .top.container { background-color: #1b1c1d; color: #fff; }
-.top.container .inner { width: 1024px; margin: auto; }
+.container .inner { width: 1024px; margin: auto; }
 
 .form .field textarea.small { height: 75px; }
 
@@ -8,4 +11,14 @@
 
 .ui.bay .button { margin-bottom: 10px; }
 
-.ui.horizontal.header.divider { margin-top: 50px; margin-bottom: 50px; }
+.ui.horizontal.header.divider, .ui.divider { margin-top: 50px; margin-bottom: 50px; }
+
+.ui.floated.right { float: right; }
+.ui.floated.left { float: left; }
+
+.ui.inner .menu .item { padding-top: 20px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px; }
+.ui.inner .menu .dropdown.item .item { padding: 15px; }
+
+.ui.tab.segment { padding: 30px; }
+
+.ui.header.white { color: #fff; }
