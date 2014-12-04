@@ -18,7 +18,7 @@
                       <input type="text" placeholder="Search by name, id or description...">
                       <div class="ui icon button"><i class="search icon"></i></div>
                     </div>
-                    <a class='ui button primary floated icon labeled right'><i class='icon add'></i> New Product</a>
+                    <a href='./product-form.php' class='ui button primary floated icon labeled right'><i class='icon add'></i> New Product</a>
                     <a class='ui button orange dropdown floated icon right'><i class='icon filter'></i>
                       <div class='menu'>
                         <div class='item'>Enabled Products</div>

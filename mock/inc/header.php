@@ -44,7 +44,7 @@
             <a class="ui dropdown item"> Products
               <div class="menu">
                 <div onclick="goto('./product-form.php')" class="item"><i class='icon add'></i> Add Product</div>
-                <div class="item"><i class='icon tasks'></i> Manage Products</div>
+                <div onclick="goto('./manage-products.php')" class="item"><i class='icon tasks'></i> Manage Products</div>
                 <div class="item"><i class='icon list'></i> Manage Attributes</div>
                 <div class="item"><i class='icon list'></i> Manage Collections</div>
                 <div class="item"><i class='icon cube'></i> Stock Adjustment</div>
