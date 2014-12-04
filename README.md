@@ -19,9 +19,10 @@ Here, have a screenshot.
 - Report Designer
 - Full API
 - Plugins and stuff
+- MOTO and ProForma options.
 
 ## Installation
-There isn't really anything to install yet, but be a rebel. 
+There isn't really anything to install yet, but be a rebel.
 ```php
 composer install
 ```

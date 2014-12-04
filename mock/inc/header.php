@@ -14,6 +14,7 @@
 
   <script src="./assets/jquery.min.js"></script>
   <script src="./assets/semantic.min.js"></script>
+  <script src="./assets/chart.js"></script>
   <script>
     function goto(location){
       window.location = location;
