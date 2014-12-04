@@ -15,6 +15,7 @@
 
 .ui.floated.right { float: right; }
 .ui.floated.left { float: left; }
+.ui.half { width: 50%; }
 
 .ui.inner .menu .item { padding-top: 20px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px; }
 .ui.inner .menu .dropdown.item .item { padding: 15px; }

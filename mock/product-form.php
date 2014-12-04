@@ -88,7 +88,7 @@
             </div>
 
             <p>&nbsp;</p>
-            <button type='submit' class='ui button labeled icon green floated right'><i class='icon save'></i> Save Product</button>
+            <button type='submit' id='dim' class='ui button labeled icon green floated right'><i class='icon save'></i> Save Product</button>
             <a class='ui button labeled icon orange floated right'><i class='icon copy'></i> Save &amp; Duplicate</a>
           </form>
         </div>
@@ -97,6 +97,7 @@
     </div>
 
   </div>
+
   <script>
     $('.menu .item').tab();
 
