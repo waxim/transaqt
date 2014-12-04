@@ -3,15 +3,52 @@
     Basic Information
     <div class="sub header">Enter the basics of the product below.</div>
   </h3>
+
+  <div class="field">
+    <label>Product Type</label>
+    <p>What type of product is this? A product group is used as a container for 'Variations' and isn't actually a product at all.</p>
+    <div class="ui dropdown selection">
+      <input type="hidden" name="gender">
+      <div class="default text">Regular</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item" data-value="male">Regular Product</div>
+        <div class="item" data-value="virtual">Virtual Product</div>
+        <div class="item" data-value="female">Product Group</div>
+      </div>
+    </div>
+  </div>
+
   <div class="field">
     <label>Product Name</label>
+    <p>In general you should try and avoid long names.</p>
     <input type="text">
   </div>
 
   <div class="field">
     <label>Product Outline</label>
     <p>You may use markdown and limited html for product descriptions.</p>
-    <textarea class='small'></textarea>
+    <div class="ui block top attached header">
+      <div class="ui icon buttons">
+        <div class="ui button"><i class="bold icon"></i></div>
+        <div class="ui button"><i class="italic icon"></i></div>
+        <div class="ui button"><i class="underline icon"></i></div>
+        <div class="ui button"><i class="anchor icon"></i></div>
+        <div class="ui button"><i class="camera icon"></i></div>
+        <div class="ui button"><i class="table icon"></i></div>
+      </div>
+      <div class="ui icon buttons">
+        <div class="ui button"><i class="content icon"></i>Insert Block</div>
+      </div>
+
+      <div class="ui icon buttons">
+        <div class="ui button"><i class="code icon"></i>Insert Widget</div>
+      </div>
+
+    </div>
+    <div class='ui bottom attached secondary segment'>
+      <textarea class='small'></textarea>
+    </div>
   </div>
 
   <div class="field">

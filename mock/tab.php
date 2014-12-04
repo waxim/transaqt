@@ -61,6 +61,7 @@
 
             <div class="ui top attached tabular menu">
               <a class="item active" data-tab="first"><i class='icon pencil'></i> Basic</a>
+              <a class="item" data-tab="six"><i class='icon list'></i> Attributes</a>
               <a class="item" data-tab="second"><i class='icon camera'></i> Media</a>
               <a class="item" data-tab="five"><i class='icon cubes'></i> Stock</a>
               <a class="item" data-tab="third"><i class='icon settings'></i> Settings</a>
@@ -80,6 +81,10 @@
 
             <div data-tab="five" class="ui bottom attached tab segment">
               <?php include "./tabs/five.php"; ?>
+            </div>
+
+            <div data-tab="six" class="ui bottom attached tab segment">
+              <?php include "./tabs/six.php"; ?>
             </div>
 
             <p>&nbsp;</p>

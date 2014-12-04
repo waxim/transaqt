@@ -45,6 +45,7 @@
               <div class="menu">
                 <div class="item"><i class='icon add'></i> Add Product</div>
                 <div class="item"><i class='icon tasks'></i> Manage Products</div>
+                <div class="item"><i class='icon list'></i> Manage Attributes</div>
                 <div class="item"><i class='icon cube'></i> Stock Adjustment</div>
               </div>
             </a>
