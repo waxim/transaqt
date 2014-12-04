@@ -14,6 +14,11 @@
 
   <script src="./assets/jquery.min.js"></script>
   <script src="./assets/semantic.min.js"></script>
+  <script>
+    function goto(location){
+      window.location = location;
+    }
+  </script>
 </head>
 <body class='pushable'>
 
@@ -34,18 +39,13 @@
       <div class='ui inner'>
         <div class="ui tiered black inverted menu">
           <div class="menu">
-            <a class="ui dropdown item"> Dash</a>
-            <a class="ui dropdown item"> Collections
-              <div class="menu">
-                <div class="item"><i class='icon add'></i> Add A Collection</div>
-                <div class="item"><i class='icon tasks'></i> Manage Collections</div>
-              </div>
-            </a>
+            <a onclick="goto('./index.php')" class="ui dropdown item"> Dash</a>
             <a class="ui dropdown item"> Products
               <div class="menu">
-                <div class="item"><i class='icon add'></i> Add Product</div>
+                <div onclick="goto('./product-form.php')" class="item"><i class='icon add'></i> Add Product</div>
                 <div class="item"><i class='icon tasks'></i> Manage Products</div>
                 <div class="item"><i class='icon list'></i> Manage Attributes</div>
+                <div class="item"><i class='icon list'></i> Manage Collections</div>
                 <div class="item"><i class='icon cube'></i> Stock Adjustment</div>
               </div>
             </a>
@@ -53,6 +53,7 @@
               <div class="menu">
                 <div class="ui dropdown item"><i class='icon inbox'></i> Orders</div>
                 <div class="item"><i class='icon money'></i> Refunds</div>
+                <div class="item"><i class='icon retweet'></i> Exchanges</div>
                 <div class="item"><i class='icon truck'></i> Shipments</div>
               </div>
             </a>
@@ -60,6 +61,13 @@
               <div class="menu">
                 <div class="item"><i class='icon add'></i> Add A Customer</div>
                 <div class="item"><i class='icon tasks'></i> Manage Customers</div>
+              </div>
+            </a>
+            <a class="ui dropdown item"> Tickets
+              <div class="menu">
+                <div class="item"><i class='icon legal'></i> View New Tickets</div>
+                <div class="item"><i class='icon reply'></i> Tickets Awating Reply</div>
+                <div class="item"><i class='icon tasks'></i> All Tickets</div>
               </div>
             </a>
             <a class="ui dropdown item"> Media
@@ -105,6 +113,7 @@
                 <div class="item"><i class='icon flag'></i> Languages</div>
                 <div class="item"><i class='icon payment'></i> Payment Gateways</div>
                 <div class="item"><i class='icon code'></i> Plugins</div>
+                <div class="item"><i class='icon unordered list'></i> Order Statuses</div>
                 <div class="item"><i class='icon settings'></i> Site Settings</div>
                 <div class="item"><i class='icon settings'></i> Product Settings</div>
                 <div class="item"><i class='icon settings'></i> Customer Settings</div>

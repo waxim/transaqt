@@ -1,12 +1,27 @@
 [![Build Status](https://travis-ci.org/waxim/transaqt.svg?branch=master)](https://travis-ci.org/waxim/transaqt)
 
 ## Transaqt
-This will one day be a PHP 5 ecommerce system. Simple for both developers and non developers. This is just layout for now to keep things straight in my head.
+Transaqt will be an shoping system with a killer back office, hopefully.
+
+Here, have a screenshot.
+![The add product page](./screenshot.png)
 
 ## Features
 - Allows people to buy stuff.
 
+## Other less important features
+- Stock Management
+- Case Management
+- Sensible Promotion Management
+- Sensible Refunds and Exchanges
+- i18n
+- Sensible Content Manager
+- Report Designer
+- Full API
+- Plugins and stuff
+
 ## Installation
+There isn't really anything to install yet, but be a rebel. 
 ```php
 composer install
 ```

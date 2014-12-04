@@ -73,15 +73,15 @@
   </div>
 
   <div class="field">
-    <label>Tax Class</label>
+    <label>Taxable</label>
     <p>Products will be taxed at your default tax rate unless told otherwise.</p>
     <div class="ui dropdown selection">
       <input type="hidden" name="gender">
-      <div class="default text">Default</div>
+      <div class="default text">Taxable Item</div>
       <i class="dropdown icon"></i>
       <div class="menu">
-        <div class="item" data-value="male">VAT</div>
-        <div class="item" data-value="female">None</div>
+        <div class="item" data-value="male">Taxable Item</div>
+        <div class="item" data-value="female">None Taxable Item</div>
       </div>
     </div>
   </div>

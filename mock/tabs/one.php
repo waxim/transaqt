@@ -22,7 +22,7 @@
   <div class="field">
     <label>Product Name</label>
     <p>In general you should try and avoid long names.</p>
-    <input type="text">
+    <input id='name' name='name' type="text">
   </div>
 
   <div class="field">
@@ -47,14 +47,34 @@
 
     </div>
     <div class='ui bottom attached secondary segment'>
-      <textarea class='small'></textarea>
+      <textarea name='outline' id='outline' class='small'></textarea>
     </div>
   </div>
 
   <div class="field">
     <label>Product Description</label>
     <p>You may use markdown and limited html for product descriptions.</p>
-    <textarea></textarea>
+    <div class="ui block top attached header">
+      <div class="ui icon buttons">
+        <div class="ui button"><i class="bold icon"></i></div>
+        <div class="ui button"><i class="italic icon"></i></div>
+        <div class="ui button"><i class="underline icon"></i></div>
+        <div class="ui button"><i class="anchor icon"></i></div>
+        <div class="ui button"><i class="camera icon"></i></div>
+        <div class="ui button"><i class="table icon"></i></div>
+      </div>
+      <div class="ui icon buttons">
+        <div class="ui button"><i class="content icon"></i>Insert Block</div>
+      </div>
+
+      <div class="ui icon buttons">
+        <div class="ui button"><i class="code icon"></i>Insert Widget</div>
+      </div>
+
+    </div>
+    <div class='ui bottom attached secondary segment'>
+      <textarea name='description' id='description'></textarea>
+    </div>
   </div>
 
   <div class="field">
@@ -66,8 +86,14 @@
   <div class="field">
     <label>URL Key</label>
     <p>This is the path to the product form the url example.com/<strong>widget-one</strong></p>
-    <input type="text">
+    <div class="ui labeled input">
+      <div class="ui label">
+        http://www.example.com/
+      </div>
+      <input type="text" placeholder="widget-one">
+    </div>
   </div>
+
 
   <div class="field">
     <label>Collections</label>
@@ -84,7 +110,7 @@
   <div class="three fields">
     <p>Leave a field blank to automatically convert the currency at the set exchange rate.</p>
     <div class="field">
-      <label>Normal Price</label>
+      <label>Normal Price (Excluding Taxes)</label>
       <div class="ui icon input">
         <input type="text" placeholder="Pound Sterling">
         <i class="gbp icon"></i>
@@ -112,7 +138,7 @@
   <div class="three fields">
     <p>Setting a special price will override the current price and show the discount amount.</p>
     <div class="field">
-      <label>Special Price</label>
+      <label>Special Price (Excluding Taxes)</label>
       <div class="ui icon input">
         <input type="text" placeholder="Pound Sterling">
         <i class="gbp icon"></i>
