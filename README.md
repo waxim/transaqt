@@ -20,6 +20,11 @@ Here, have a screenshot.
 - Full API
 - Plugins and stuff
 - MOTO and ProForma options.
+- Subscriptions
+
+## Intergrations
+- PayPal (Including Here, with an app), Stripe, GoCardless, SagePay and others
+- FedEx, UPS, DHL, Royal Mail, USPS
 
 ## Installation
 There isn't really anything to install yet, but be a rebel.

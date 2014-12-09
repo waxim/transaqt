@@ -5,7 +5,7 @@
       <div class="ui grid">
         <div class='sixteen wide column'>
           <div class="ui breadcrumb">
-            <a class="section">Products</a>
+            <a href='./manage-products.php' class="section">Products</a>
             <i class="right chevron icon divider"></i>
             <a class="active section">Add Product</a>
           </div>
