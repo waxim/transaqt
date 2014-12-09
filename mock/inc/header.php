@@ -25,7 +25,7 @@
 
   <div class='pusher'>
 
-    <div class='verytop container'>
+    <div class='verytop container' style='display: none'>
       <div class='ui grid inner'>
         <div class="eight wide column">
             <h1 class='ui header white'>Transaqt
@@ -45,7 +45,7 @@
               <div class="menu">
                 <div onclick="goto('./product-form.php')" class="item"><i class='icon add'></i> Add Product</div>
                 <div onclick="goto('./manage-products.php')" class="item"><i class='icon tasks'></i> Manage Products</div>
-                <div class="item"><i class='icon list'></i> Manage Attributes</div>
+                <div onclick="goto('./manage-attributes.php')" class="item"><i class='icon list'></i> Manage Attributes</div>
                 <div class="item"><i class='icon list'></i> Manage Collections</div>
                 <div class="item"><i class='icon cube'></i> Stock Adjustment</div>
               </div>
@@ -56,6 +56,7 @@
                 <div class="item"><i class='icon money'></i> Refunds</div>
                 <div class="item"><i class='icon retweet'></i> Exchanges</div>
                 <div class="item"><i class='icon truck'></i> Shipments</div>
+                <div class="item"><i class='icon building'></i> Fullfilment</div>
               </div>
             </a>
             <a class="ui dropdown item"> Customers

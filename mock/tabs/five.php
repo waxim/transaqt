@@ -11,6 +11,12 @@
   </div>
 
   <div class="field">
+    <label>Warning Level</label>
+    <p>This is the level at which the system will warn you about this products stock level.</p>
+    <input type="text">
+  </div>
+
+  <div class="field">
     <label>Allow Backorders</label>
     <p>If set to yes products will be saleable while 'Out of stock'</p>
     <div class="ui dropdown selection">

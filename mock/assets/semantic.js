@@ -1395,7 +1395,7 @@ $.fn.checkbox = function(parameters) {
         moduleNamespace = 'module-' + namespace,
 
         $module         = $(this),
-        $label          = $(this).next(selector.label).first(),
+        $label          = $(this).next(selector.label).first() || null,
         $input          = $(this).find(selector.input),
 
         instance        = $module.data(moduleNamespace),
@@ -1447,14 +1447,18 @@ $.fn.checkbox = function(parameters) {
           $input
             .off(eventNamespace, module.event.keydown)
           ;
-          $label
-            .off(eventNamespace)
-          ;
+          if($label){
+            $label
+              .off(eventNamespace)
+            ;
+          }
         },
 
         refresh: function() {
           $module = $(this);
-          $label  = $(this).next(selector.label).first();
+          if($label){
+            $label  = $(this).next(selector.label).first();
+          }
           $input  = $(this).find(selector.input);
         },
 

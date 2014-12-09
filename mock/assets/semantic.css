@@ -4261,6 +4261,10 @@ a.ui.card:hover,
   z-index: -1;
 }
 
+.ui.checkbox input.unlabled {
+
+}
+
 /*--------------
       Box
 ---------------*/
