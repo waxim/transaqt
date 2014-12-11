@@ -15,6 +15,8 @@
         <div class="item" data-value="male">Regular Product</div>
         <div class="item" data-value="virtual">Virtual Product</div>
         <div class="item" data-value="female">Product Group</div>
+        <div class="item" data-value="female">Service</div>
+        <div class="item" data-value="female">Subscription</div>
       </div>
     </div>
   </div>

@@ -61,7 +61,19 @@
   <div class="field">
     <label>Location</label>
     <p>Where is this stock stored?</p>
-    <input type="text">
+    <div class="ui dropdown selection">
+      <input type="hidden" name="gender">
+      <div class="default text">Warehouse B</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item" data-value="male">Warehouse A</div>
+        <div class="item" data-value="male">Warehouse B</div>
+        <div class="item" data-value="male">Warehouse B - A7</div>
+        <div class="item" data-value="female">Warehouse B - L6</div>
+        <div class="item" data-value="female">Warehouse B - Q4</div>
+        <div class="item" data-value="female">Office</div>
+      </div>
+    </div>
   </div>
 
   <div class="field">

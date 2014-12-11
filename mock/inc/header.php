@@ -114,6 +114,8 @@
                 <div class="item"><i class='icon yen'></i> Currencies</div>
                 <div class="item"><i class='icon flag'></i> Languages</div>
                 <div class="item"><i class='icon payment'></i> Payment Gateways</div>
+                <div class="item"><i class='icon file pdf'></i> PDF Designer</div>
+                <div class="item"><i class='icon building'></i> Warehouses</div>
                 <div class="item"><i class='icon code'></i> Plugins</div>
                 <div class="item"><i class='icon unordered list'></i> Order Statuses</div>
                 <div class="item"><i class='icon settings'></i> Site Settings</div>
