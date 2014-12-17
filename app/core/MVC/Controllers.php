@@ -10,7 +10,7 @@ class Controller {
 	static public function init(){
 		static::$engine = new \Slim\Slim();
 
-		static::$engine->map('(/)(:controller)(/)(:method)(/)(:arguments+)', function ($controller = 'noroute', $method = 'index', $args = array()) {
+		static::$engine->map('(/)(:controller)(/)(:method)(/)(:arguments+)', function ($controller = 'default', $method = 'index', $args = array()) {
 			\Transaqt\Controller::handle($controller, $method, $args);
 		})->via('GET','POST','PUT','PATCH','DELETE');
 
@@ -64,9 +64,14 @@ class Controller {
 		// Test if we have controller
 			// TODO
 
+		if($controller == 'default'){
 		// If no send to default
-		$controller = self::parse(\Transaqt\Config::get('app.routes.default'));
-		//echo "hello ".$controller->class;
+			$controller = self::parse(\Transaqt\Config::get('app.routes.default'));
+		} else {
+			//echo "hello ".$controller->class;
+			$controller = self::parse(\Transaqt\Config::get('app.routes.noroute'));
+		}
+		
 		call_user_func(array('\\'. __NAMESPACE__ .'\\' . $controller->class, $controller->method));
 		//echo "hello $controller@$action";
 

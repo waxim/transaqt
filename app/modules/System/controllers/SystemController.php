@@ -12,5 +12,13 @@ class SystemController extends \Transaqt\Controller {
 		echo $html;
 	}
 
+	public static function noroute(){
+		/*
+			ToDo: Make some view code using plates
+		*/
+		$html = file_get_contents(MODULEPATH."/System/views/noroute.php");
+		echo $html;
+	}
+
 
 }
