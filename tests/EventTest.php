@@ -15,7 +15,7 @@ class EventTests extends PHPUnit_Framework_TestCase {
 	*/
 	public function testTrigger(){
 		$sample = new \Transaqt\Event();
-		$sample->register('test.event',function(){ return true; });
+		$sample->register('test.event',function(){ return false; });
 		$this->assertTrue($sample->trigger('test.event'));
 	}
 
