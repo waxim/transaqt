@@ -30,6 +30,10 @@ class Modules {
       collect modules
     */
 
+  	public static function collect(){
+    	return [];
+  	}
+  
     /*
       enable module
     */
