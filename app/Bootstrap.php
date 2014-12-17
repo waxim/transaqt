@@ -1,7 +1,7 @@
 <?php
 
 /*
-  Set some constants 
+  Set some constants
 */
 
   define('APPPATH',__DIR__);
@@ -18,6 +18,11 @@
   require_once(CORE . '/' . 'Config.php');
   require_once(CORE . '/' . 'MVC/Controllers.php');
 
+/*
+  ToDo: Make a module loader, for now manually include
+*/
+  require_once(MODULEPATH .'/System/controllers/SystemController.php');
+
   /*
   Set an error handler
 */
@@ -29,13 +34,13 @@
   Config
 */
   \Transaqt\Config::file(APPPATH,'config.json');
-  
+
 /*
   Core Auto-Loader
 */
   //\Transaqt\Core::init();
 
-  
+
 /*
   Module Auto-Loader
 */
@@ -46,6 +51,5 @@
 */
 
   \Transaqt\Controller::init();
-  \Transaqt\Controller::get();
-  
+
   \Transaqt\Controller::dispatch();

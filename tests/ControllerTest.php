@@ -10,4 +10,14 @@ class ControllerTests extends PHPUnit_Framework_TestCase {
 		$this->assertTrue(class_exists('\Transaqt\Controller'));
 	}
 
+	/*
+		Test a GET request
+	*/
+
+	/*
+		Test a POST request
+	*/
+
+
+
 }
