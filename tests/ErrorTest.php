@@ -1,22 +1,26 @@
 <?php
-require_once('./app/core/Events.php');
+require_once('./app/core/Exceptions/Exception.php');
+require_once('./app/core/Exceptions/Unknown.php');
 
-class EventTests extends PHPUnit_Framework_TestCase {
+class ErrorTests extends PHPUnit_Framework_TestCase {
 
 	/*
 		Test class exists
 	*/
 	public function testVendor(){
-		$this->assertTrue(class_exists('\Transaqt\Event'));
+		$this->assertTrue(class_exists('\Transaqt\Exceptions\Factory'));
+		$this->assertTrue(class_exists('\Transaqt\Exceptions\Error\Unknown'));
 	}
 
 	/*
-		Test we can make and trigger events
+		Test we can trigger and catch errors
 	*/
-	public function testTrigger(){
-		$sample = new \Transaqt\Event();
-		$sample->register('test.event',function(){ return true; });
-		$this->assertTrue($sample->trigger('test.event'));
+	public function testError(){
+		try {
+			new \Transaqt\Exceptions\Error\Unknown;
+		} catch(\Transaqt\Exceptions\Error\Unknown $e){
+			$this->assetSame($e->getType(),\Transaqt\Exceptions\Factory::FATAL);
+		}
 	}
 
 }
