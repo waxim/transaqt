@@ -7,7 +7,7 @@ class Unknown extends \Transaqt\Exceptions\Factory {
   public function __construct(){
     parent::__construct();
 
-    $this->type = \Transaqt\Exceptions\Factory::WARNING;
+    $this->type = \Transaqt\Exceptions\Factory::FATAL;
     $this->message = "There was an unknown error";
   }
 

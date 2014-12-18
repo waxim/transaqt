@@ -10,7 +10,7 @@ Here, have a screenshot.
 Things with a line though haven't been started.
 - Mock Interface - __Progress:__ 10%
 - Build Core - __Progress:__ 5%
-- 100% Test Coverage - __Progress:__ 1%
+- 100% Test Coverage - __Progress:__ 10%
 - Docs - __Progress:__ 0.00001%
 - ~~Build Module System~~
 - ~~Build Core Modules~~
