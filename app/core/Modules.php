@@ -4,29 +4,37 @@ namespace Transaqt;
 
 class Modules {
 
-    /*
-      Our container for all things module.
+  protected static $modules = array();
 
-      Notes:
-      This basic idea is that modules will
-      build to a giant object of module
-      information and include all its files
-      at which point the module should be
-      called using its namespace
+	/*
+		Files and folders for modules
+	*/
+	protected static $path = MODULEPATH;
+	protected static $folders = ['controllers','models','controllers/Admin'];
 
-        \ModuleNamespace\Controller::function();
-        \ModuleNamespace\Model::function();
-        \ModuleNamespace\View::function();
+	/*
+		Function to include all files needed
+	*/
+	static public function loadFiles(){
 
-      The module system will take of adding controllers
-      models, views, assets, events, installs, uninstalls
-      and all modules will have access to the Transaqt::Core()
+		foreach(glob(self::$path.'/*') as $module){
+			if(is_dir($module) && file_exists($module . '/Module.php')){
+				foreach(self::$folders as $folder){
+					foreach (glob($module . '/' . $folder ."/*.php") as $filename){
+						include $filename;
+					}
+				}
+
+        // Include its config file
+        include $module . '/Module.php';
+			}
+		}
 
 
-    */
-    protected static $modules = array();
 
-    /*
+	}
+
+	/*
       collect modules
     */
 

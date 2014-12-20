@@ -5,7 +5,7 @@
 
 		"routes" : {
 			"installation" : "Install@Welcome",
-			"default" : "System@welcome",
+			"default" : "Development@holding",
 			"noroute" : "System@noroute",
 			"error" : "System@error"
 		},

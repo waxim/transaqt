@@ -17,11 +17,15 @@
   require_once(CORE . '/' . 'Transaqt.php');
   require_once(CORE . '/' . 'Config.php');
   require_once(CORE . '/' . 'MVC/Controllers.php');
+  require_once(CORE . '/' . 'MVC/Views.php');
+  require_once(CORE . '/' . 'Modules.php');
 
 /*
   ToDo: Make a module loader, for now manually include
 */
-  require_once(MODULEPATH .'/System/controllers/SystemController.php');
+  //require_once(MODULEPATH .'/System/controllers/SystemController.php');
+  \Transaqt\Views::collect();
+  \Transaqt\Modules::loadFiles();
 
   /*
   Set an error handler

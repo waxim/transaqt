@@ -5,7 +5,7 @@ namespace Transaqt;
 class Controller {
 
 	static $engine;
-	static $routes;
+	static $routes = [];
 
 	static public function init(){
 		static::$engine = new \Slim\Slim();
@@ -59,19 +59,51 @@ class Controller {
 		} else { return false; }
 	}
 
+	static function route($controller, $action){
+		if($action !== "index"){
+			if(isset(self::$routes[$controller.'/'.$action])){
+				return self::parse(self::$routes[$controller."/".$action]['map']);
+			} else {
+				return false;
+			}
+		} else {
+			if(isset(self::$routes[$controller])){
+				return self::parse(self::$routes[$controller]['map']);
+			} else {
+				return false;
+			}
+		}
+	}
+
+	static function format($controller, $action){
+
+		$out = new \StdClass;
+		$out->controller = ucfirst($controller);
+		$out->method = $method;
+
+		return $out;
+	}
+
+	static function addRoute($route, $map){
+		$data = array('map' => $map);
+		self::$routes[$route] = $data;
+	}
+
 	static function handle($controller, $action, $args){
 
 		// Test if we have controller
 			// TODO
-
 		if($controller == 'default'){
 		// If no send to default
 			$controller = self::parse(\Transaqt\Config::get('app.routes.default'));
 		} else {
-			//echo "hello ".$controller->class;
-			$controller = self::parse(\Transaqt\Config::get('app.routes.noroute'));
+			$controller = self::route($controller, $action);
+			if(!$controller){
+				//echo "hello ".$controller->class;
+				$controller = self::parse(\Transaqt\Config::get('app.routes.noroute'));
+			}
 		}
-		
+
 		call_user_func(array('\\'. __NAMESPACE__ .'\\' . $controller->class, $controller->method));
 		//echo "hello $controller@$action";
 
