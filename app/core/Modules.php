@@ -27,12 +27,35 @@ class Modules {
 
         // Include its config file
         include $module . '/Module.php';
+
 			}
 		}
 
 
 
 	}
+
+  public static function register(array $module){
+    // lets get an register controllers
+    if(isset($module['routes'])){
+      foreach($module['routes'] as $route){
+        \Transaqt\Controller::addRoute($route[0],$route[1]);
+      }
+    }
+
+    // register views
+    if(isset($module['views'])){
+      foreach($module['views'] as $view){
+        \Transaqt\Views::addViews(ucwords($view), MODULEPATH . '/' . ucwords($view) . '/views/');
+      }
+    }
+
+    if(!isset($module['enabled'])){ $module['enabled'] = true; }
+
+    // Save our module
+    self::$modules[$module['slug']] = $module;
+
+  }
 
 	/*
       collect modules
@@ -41,21 +64,44 @@ class Modules {
   	public static function collect(){
     	return [];
   	}
-  
+
     /*
       enable module
     */
+    public static function enable($slug){
+      if(self::exists($slug) && !self::enabled($slug)){
+        self::$modules[$slug]['enabled'] = true;
+      }
+    }
 
     /*
       disable module
     */
+    public static function disable($slug){
+      if(self::exists($slug) && self::enabled($slug)){
+        self::$modules[$slug]['enabled'] = false;
+      }
+    }
 
     /*
-      install module
+      test a module exists
     */
+    public static function exists($slug){
+      if(isset(self::$modules[$slug])){ return true; }
+      else { return false; }
+    }
 
     /*
-      uninstall module
+      test a module is enabled
     */
+    public static function enabled($slug){
+      if(!isset(self::$modules[$slug])){ return false; }
+
+      if(self::$modules[$slug]['enabled'] == true){
+        return true;
+      } else {
+        return false;
+      }
+    }
 
 }
